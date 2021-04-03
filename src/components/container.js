@@ -84,7 +84,11 @@ const Container = (props) => {
   const [cards, setCards] = useState(images);
   const [score, setScore] = useState(0);
   const [best, setBest] = useState(0);
-  const [usedCards, setUsedCards] = useState([])
+  const [usedCards, setUsedCards] = useState([]);
+
+  const win = document.querySelector(".winOverlay");
+  const lose = document.querySelector(".loseOverlay");
+  const btns = document.querySelectorAll("#again");
 
   useEffect(() => {
     const shuffle = (e) => {
@@ -108,8 +112,15 @@ const Container = (props) => {
         setScore(score + 1);
         setUsedCards([...usedCards, e]);
       } else {
-        if (score > best) {
+        if (score > best || score === best) {
           setBest(score);
+          if (win) {
+            win.style.display = "flex";
+          }
+        } else if (score < best) {
+          if (lose) {
+            lose.style.display = "flex";
+          }
         }
         setScore(0);
         setUsedCards([]);
@@ -121,13 +132,19 @@ const Container = (props) => {
       e.addEventListener("click", () => {
         shuffle(cards);
         addScore(e.className);
-        console.log(e.className);
-        console.log(`array: ${usedCards}`);
       })
     );
   });
 
   //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+
+
+  btns.forEach(e => {
+    e.addEventListener("click", () => {
+      win.style.display = "none";
+      lose.style.display = "none";
+    })
+  });
 
 
 
@@ -151,6 +168,16 @@ const Container = (props) => {
           {e.title}
         </div>
       ))}
+
+      <div className="winOverlay">
+        <span>New High Score! <br /> {best}</span>
+        <button id="again">Play again?</button>
+      </div>
+
+      <div className="loseOverlay">
+        <span>You lost!</span>
+        <button id="again">Play again?</button>
+      </div>
     </>
   )
 }
