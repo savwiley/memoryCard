@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 :root {
   --red: #9e0101;
@@ -7,7 +7,7 @@
 
 * {
   margin: 0;
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   background: var(--gray);
 }
 
@@ -30,9 +30,7 @@
 }
 
 .header span {
-  text-shadow: 1px 1px 0px #000, 
-    2px 2px 0px #000, 
-    3px 3px 0px #000, 
+  text-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000,
     4px 4px 0px #000;
   color: #fff;
   cursor: default;
@@ -42,13 +40,8 @@
   transition: all 1s ease-in-out;
 }
 .header:hover > span {
-  text-shadow: 1px 1px 0px #000, 
-    2px 2px 0px #000, 
-    3px 3px 0px #000, 
-    4px 4px 0px #000, 
-    5px 5px 0px #000,
-    6px 6px 0px #000,
-    7px 7px 0px #000,
+  text-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000,
+    4px 4px 0px #000, 5px 5px 0px #000, 6px 6px 0px #000, 7px 7px 0px #000,
     8px 8px 0px #000;
   letter-spacing: 2px;
 }
@@ -97,8 +90,7 @@
   transform: scale(1.1);
   box-shadow: 0px 0px 10px #000;
   color: #fff;
-  text-shadow: 1px 1px 0px #000,
-    2px 2px 0px #000;
+  text-shadow: 1px 1px 0px #000, 2px 2px 0px #000;
 }
 
 #title {
@@ -121,14 +113,15 @@
 
 /* OVERLAYS */
 
-.winOverlay, .loseOverlay {
+.winOverlay,
+.loseOverlay {
   display: none;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -136,17 +129,13 @@
   cursor: default;
 }
 
-.winOverlay span, .loseOverlay span {
+.winOverlay span,
+.loseOverlay span {
   color: #fff;
   background: transparent;
   font-size: 65px;
-  text-shadow: 1px 1px 0px #000, 
-    2px 2px 0px #000, 
-    3px 3px 0px #000, 
-    4px 4px 0px #000, 
-    5px 5px 0px #000,
-    6px 6px 0px #000,
-    7px 7px 0px #000,
+  text-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000,
+    4px 4px 0px #000, 5px 5px 0px #000, 6px 6px 0px #000, 7px 7px 0px #000,
     8px 8px 0px #000;
 }
 

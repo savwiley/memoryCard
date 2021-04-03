@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import ageofultron from "../images/ageofultron.jpg";
 import antmanwasp from "../images/antmanwasp.jpg";
 import avengers from "../images/avengers.jpg";
@@ -15,66 +15,79 @@ import thor from "../images/thor.jpg";
 import thorragnarok from "../images/thorragnarok.jpg";
 import wintersoldier from "../images/wintersoldier.jpg";
 
-
 const Container = (props) => {
   const images = [
     {
       name: "ageofultron",
       src: ageofultron,
       title: "Age of Ultron",
-    }, {
+    },
+    {
       name: "antmanwasp",
       src: antmanwasp,
       title: "Ant-Man & the Wasp",
-    }, {
+    },
+    {
       name: "avengers",
       src: avengers,
       title: "The Avengers",
-    }, {
+    },
+    {
       name: "blackpanther",
       src: blackpanther,
       title: "Black Panther",
-    }, {
+    },
+    {
       name: "captmarvel",
       src: captmarvel,
       title: "Captain Marvel",
-    }, {
+    },
+    {
       name: "endgame",
       src: endgame,
       title: "Endgame",
-    }, {
+    },
+    {
       name: "gotg",
       src: gotg,
       title: "Guardians of the Galaxy",
-    }, {
+    },
+    {
       name: "gotg2",
       src: gotg2,
       title: "Guardians of the Galaxy 2",
-    }, {
+    },
+    {
       name: "infinitywar",
       src: infinitywar,
       title: "Infinity War",
-    }, {
+    },
+    {
       name: "ironman",
       src: ironman,
       title: "Iron Man",
-    }, {
+    },
+    {
       name: "ironman3",
       src: ironman3,
       title: "Iron Man 3",
-    }, {
+    },
+    {
       name: "spidermanhomecoming",
       src: spidermanhomecoming,
       title: "Spider-Man: Homecoming",
-    }, {
+    },
+    {
       name: "thor",
       src: thor,
       title: "Thor",
-    }, {
+    },
+    {
       name: "thorragnarok",
       src: thorragnarok,
       title: "Thor: Ragnarok",
-    }, {
+    },
+    {
       name: "wintersoldier",
       src: wintersoldier,
       title: "The Winter Soldier",
@@ -92,7 +105,9 @@ const Container = (props) => {
   useEffect(() => {
     const shuffle = (e) => {
       setCards([]);
-      var currentIndex = e.length, temporaryValue, randomIndex;
+      var currentIndex = e.length,
+        temporaryValue,
+        randomIndex;
       // While there remain elements to shuffle...
       while (0 !== currentIndex) {
         // Pick a remaining element...
@@ -124,10 +139,10 @@ const Container = (props) => {
         setScore(0);
         setUsedCards([]);
       }
-    }
+    };
 
     const cardObjArr = document.querySelectorAll("#card");
-    cardObjArr.forEach(e => 
+    cardObjArr.forEach((e) =>
       e.addEventListener("click", () => {
         shuffle(cards);
         addScore(e.className);
@@ -135,17 +150,15 @@ const Container = (props) => {
     );
   });
 
+  //shuffle function heavily influenced by:
   //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 
-
-  btns.forEach(e => {
+  btns.forEach((e) => {
     e.addEventListener("click", () => {
       win.style.display = "none";
       lose.style.display = "none";
-    })
+    });
   });
-
-
 
   return (
     <>
@@ -155,23 +168,27 @@ const Container = (props) => {
       </div>
 
       <div className="cardContainer">
-        {cards.map(e => (
-          <div className={e.name} 
-          id="card" 
-          key={e.name} 
-          style={{
-            backgroundImage: `url(${e.src})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}>
+        {cards.map((e) => (
+          <div
+            className={e.name}
+            id="card"
+            key={e.name}
+            style={{
+              backgroundImage: `url(${e.src})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             <span id="title">{e.title}</span>
           </div>
         ))}
       </div>
 
       <div className="winOverlay">
-        <span>New High Score! <br /> {best}</span>
+        <span>
+          New High Score! <br /> {best}
+        </span>
         <button id="again">Play again?</button>
       </div>
 
@@ -180,15 +197,7 @@ const Container = (props) => {
         <button id="again">Play again?</button>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Container;
-
-/**
- * Create state that holds card names.
- * Create logic that checks if card names are or are not already in state.
- * Create logic that shuffles cards.
- * 
- * http://comic-cons.xyz/all-marvel-mcu-movie-posters/
- */
