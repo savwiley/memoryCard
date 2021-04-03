@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/memoryCard/static/css/main.68082e21.chunk.css",
+    "main.js": "/memoryCard/static/js/main.eb61f842.chunk.js",
+    "main.js.map": "/memoryCard/static/js/main.eb61f842.chunk.js.map",
+    "runtime-main.js": "/memoryCard/static/js/runtime-main.d364004d.js",
+    "runtime-main.js.map": "/memoryCard/static/js/runtime-main.d364004d.js.map",
+    "static/js/2.88048bcb.chunk.js": "/memoryCard/static/js/2.88048bcb.chunk.js",
+    "static/js/2.88048bcb.chunk.js.map": "/memoryCard/static/js/2.88048bcb.chunk.js.map",
+    "index.html": "/memoryCard/index.html",
+    "static/css/main.68082e21.chunk.css.map": "/memoryCard/static/css/main.68082e21.chunk.css.map",
+    "static/js/2.88048bcb.chunk.js.LICENSE.txt": "/memoryCard/static/js/2.88048bcb.chunk.js.LICENSE.txt",
+    "static/media/ageofultron.985b135f.jpg": "/memoryCard/static/media/ageofultron.985b135f.jpg",
+    "static/media/antmanwasp.fad249f5.jpg": "/memoryCard/static/media/antmanwasp.fad249f5.jpg",
+    "static/media/avengers.bdd33ae9.jpg": "/memoryCard/static/media/avengers.bdd33ae9.jpg",
+    "static/media/blackpanther.23114ab5.jpg": "/memoryCard/static/media/blackpanther.23114ab5.jpg",
+    "static/media/captmarvel.cd300b9d.jpg": "/memoryCard/static/media/captmarvel.cd300b9d.jpg",
+    "static/media/endgame.6d2e4f83.jpg": "/memoryCard/static/media/endgame.6d2e4f83.jpg",
+    "static/media/gotg.5abaf135.jpg": "/memoryCard/static/media/gotg.5abaf135.jpg",
+    "static/media/gotg2.f3781202.jpg": "/memoryCard/static/media/gotg2.f3781202.jpg",
+    "static/media/infinitywar.bba5096b.jpg": "/memoryCard/static/media/infinitywar.bba5096b.jpg",
+    "static/media/ironman.1500b5ab.jpg": "/memoryCard/static/media/ironman.1500b5ab.jpg",
+    "static/media/ironman3.e3bdf70e.jpg": "/memoryCard/static/media/ironman3.e3bdf70e.jpg",
+    "static/media/spidermanhomecoming.240ea069.jpg": "/memoryCard/static/media/spidermanhomecoming.240ea069.jpg",
+    "static/media/thor.da3017bf.jpg": "/memoryCard/static/media/thor.da3017bf.jpg",
+    "static/media/thorragnarok.9bd6f846.jpg": "/memoryCard/static/media/thorragnarok.9bd6f846.jpg",
+    "static/media/wintersoldier.8e450056.jpg": "/memoryCard/static/media/wintersoldier.8e450056.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d364004d.js",
+    "static/js/2.88048bcb.chunk.js",
+    "static/css/main.68082e21.chunk.css",
+    "static/js/main.eb61f842.chunk.js"
+  ]
+}
