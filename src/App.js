@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "./components/container.js";
-import ScoreBoard from "./components/scoreboard.js";
+//import ScoreBoard from "./components/scoreboard.js";
 
 const App = () => {
   return (
@@ -9,8 +9,6 @@ const App = () => {
       <div className="header">
         <span>Marvel-ous Memory</span>
       </div>
-
-      <ScoreBoard />
 
       <Container />
 
