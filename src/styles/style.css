@@ -14,6 +14,8 @@
 .main {
   position: relative;
   bottom: 0;
+  padding-bottom: 20px;
+  overflow: hidden;
 }
 
 .header {
@@ -51,6 +53,19 @@
   letter-spacing: 2px;
 }
 
+#credit {
+  background: transparent;
+  color: var(--gray);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 22px;
+}
+#credit:hover {
+  color: #2c2c2c;
+}
+
 #info {
   color: #fff;
   text-align: center;
@@ -62,15 +77,20 @@
 
 /* CARDS */
 
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 #card {
   display: inline-block;
   width: 250px;
   height: 380px;
-  margin: 10px;
+  margin: 10px 5px;
   cursor: pointer;
   text-align: center;
   color: transparent;
-  font-size: 18px;
   transition: all 0.5s;
 }
 #card:hover {
@@ -79,6 +99,13 @@
   color: #fff;
   text-shadow: 1px 1px 0px #000,
     2px 2px 0px #000;
+}
+
+#title {
+  display: none;
+  font-size: 18px;
+  margin-top: 99%;
+  height: 0;
 }
 
 /* SCORES */
@@ -106,6 +133,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+  cursor: default;
 }
 
 .winOverlay span, .loseOverlay span {
@@ -129,6 +157,7 @@
   border: none;
   padding: 0 10px;
   cursor: pointer;
+  outline: none;
   transition: all 0.2s;
 }
 #again:hover {
