@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-//import ScoreBoard from "./scoreboard.js";
 import ageofultron from "../images/ageofultron.jpg";
 import antmanwasp from "../images/antmanwasp.jpg";
 import avengers from "../images/avengers.jpg";
@@ -26,7 +25,7 @@ const Container = (props) => {
     }, {
       name: "antmanwasp",
       src: antmanwasp,
-      title: "Ant-Man and the Wasp",
+      title: "Ant-Man & the Wasp",
     }, {
       name: "avengers",
       src: avengers,
@@ -42,7 +41,7 @@ const Container = (props) => {
     }, {
       name: "endgame",
       src: endgame,
-      title: "Avengers: Endgame",
+      title: "Endgame",
     }, {
       name: "gotg",
       src: gotg,
@@ -78,7 +77,7 @@ const Container = (props) => {
     }, {
       name: "wintersoldier",
       src: wintersoldier,
-      title: "Captain America: The Winter Soldier",
+      title: "The Winter Soldier",
     },
   ];
   const [cards, setCards] = useState(images);
@@ -155,19 +154,21 @@ const Container = (props) => {
         <span id="bestScore">High Score: {best}</span>
       </div>
 
-      {cards.map(e => (
-        <div className={e.name} 
-        id="card" 
-        key={e.name} 
-        style={{
-          backgroundImage: `url(${e.src})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}>
-          {e.title}
-        </div>
-      ))}
+      <div className="cardContainer">
+        {cards.map(e => (
+          <div className={e.name} 
+          id="card" 
+          key={e.name} 
+          style={{
+            backgroundImage: `url(${e.src})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}>
+            <span id="title">{e.title}</span>
+          </div>
+        ))}
+      </div>
 
       <div className="winOverlay">
         <span>New High Score! <br /> {best}</span>
