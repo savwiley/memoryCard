@@ -10,6 +10,10 @@ const App = () => {
         <span>Marvel-ous Memory</span>
       </div>
 
+      <span id="info">
+        Get points by clicking on the posters! Click on the same one twice and you lose. Get all 15 and you win!
+      </span>
+
       <Container />
 
     </div>
