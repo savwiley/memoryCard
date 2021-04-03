@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+  --red: #9e0101;
+  --gray: #181818;
+}
+
+* {
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+  background: var(--gray);
+}
+
+.main {
+  position: relative;
+  bottom: 0;
+}
+
+.header {
+  display: block;
+  position: relative;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  box-shadow: 0px 4px 4px #000;
+  text-align: center;
+  background: var(--red);
+}
+
+.header span {
+  text-shadow: 1px 1px 0px #000, 
+    2px 2px 0px #000, 
+    3px 3px 0px #000, 
+    4px 4px 0px #000;
+  color: #fff;
+  cursor: default;
+  font-size: 60px;
+  letter-spacing: 1px;
+  background: transparent;
+  transition: all 1s ease-in-out;
+}
+.header:hover > span {
+  text-shadow: 1px 1px 0px #000, 
+    2px 2px 0px #000, 
+    3px 3px 0px #000, 
+    4px 4px 0px #000, 
+    5px 5px 0px #000,
+    6px 6px 0px #000,
+    7px 7px 0px #000,
+    8px 8px 0px #000;
+  letter-spacing: 2px;
+}
+
+/* CARDS */
+
+#card {
+  display: inline-block;
+  width: 250px;
+  height: 380px;
+  margin: 10px;
+}
+
+/* SCORES */
+
+.scoreboard {
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+}
+#bestScore {
+  float: right;
+}
