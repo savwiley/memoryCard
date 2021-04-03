@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import ScoreBoard from "./scoreboard.js";
+//import ScoreBoard from "./scoreboard.js";
 import ageofultron from "../images/ageofultron.jpg";
 import antmanwasp from "../images/antmanwasp.jpg";
 import avengers from "../images/avengers.jpg";
@@ -20,53 +20,71 @@ import wintersoldier from "../images/wintersoldier.jpg";
 const Container = (props) => {
   const images = [
     {
+      name: "ageofultron",
       src: ageofultron,
       title: "Age of Ultron",
     }, {
+      name: "antmanwasp",
       src: antmanwasp,
       title: "Ant-Man and the Wasp",
     }, {
+      name: "avengers",
       src: avengers,
       title: "The Avengers",
     }, {
+      name: "blackpanther",
       src: blackpanther,
       title: "Black Panther",
     }, {
+      name: "captmarvel",
       src: captmarvel,
       title: "Captain Marvel",
     }, {
+      name: "endgame",
       src: endgame,
       title: "Avengers: Endgame",
     }, {
+      name: "gotg",
       src: gotg,
       title: "Guardians of the Galaxy",
     }, {
+      name: "gotg2",
       src: gotg2,
       title: "Guardians of the Galaxy 2",
     }, {
+      name: "infinitywar",
       src: infinitywar,
       title: "Infinity War",
     }, {
+      name: "ironman",
       src: ironman,
       title: "Iron Man",
     }, {
+      name: "ironman3",
       src: ironman3,
       title: "Iron Man 3",
     }, {
+      name: "spidermanhomecoming",
       src: spidermanhomecoming,
       title: "Spider-Man: Homecoming",
     }, {
+      name: "thor",
       src: thor,
       title: "Thor",
     }, {
+      name: "thorragnarok",
       src: thorragnarok,
       title: "Thor: Ragnarok",
     }, {
+      name: "wintersoldier",
       src: wintersoldier,
       title: "Captain America: The Winter Soldier",
     },
   ];
   const [cards, setCards] = useState(images);
+  const [score, setScore] = useState(0);
+  const [best, setBest] = useState(0);
+  const [usedCards, setUsedCards] = useState([])
 
   useEffect(() => {
     const shuffle = (e) => {
@@ -85,10 +103,26 @@ const Container = (props) => {
       return setCards(e);
     };
 
+    const addScore = (e) => {
+      if (!usedCards.includes(e)) {
+        setScore(score + 1);
+        setUsedCards([...usedCards, e]);
+      } else {
+        if (score > best) {
+          setBest(score);
+        }
+        setScore(0);
+        setUsedCards([]);
+      }
+    }
+
     const cardObjArr = document.querySelectorAll("#card");
     cardObjArr.forEach(e => 
       e.addEventListener("click", () => {
         shuffle(cards);
+        addScore(e.className);
+        console.log(e.className);
+        console.log(`array: ${usedCards}`);
       })
     );
   });
@@ -99,10 +133,15 @@ const Container = (props) => {
 
   return (
     <>
+      <div className="scoreboard">
+        <span id="currentScore">Current Score: {score}</span>
+        <span id="bestScore">High Score: {best}</span>
+      </div>
+
       {cards.map(e => (
-        <div className={e.src} 
+        <div className={e.name} 
         id="card" 
-        key={e.src} 
+        key={e.name} 
         style={{
           backgroundImage: `url(${e.src})`,
           backgroundPosition: "center",
