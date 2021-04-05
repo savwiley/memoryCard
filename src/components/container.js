@@ -100,6 +100,7 @@ const Container = (props) => {
 
   const win = document.querySelector(".winOverlay");
   const lose = document.querySelector(".loseOverlay");
+  const all = document.querySelector(".allOverlay");
   const btns = document.querySelectorAll("#again");
 
   useEffect(() => {
@@ -122,7 +123,13 @@ const Container = (props) => {
     };
 
     const addScore = (e) => {
-      if (!usedCards.includes(e)) {
+      //score > 13 bc it doesn't read 15 until after another is clicked. we put in >13 instead of 14 as a failsafe.
+      if (all && score > 13) {
+        setBest(15);
+        all.style.display = "flex";
+        setScore(0);
+        setUsedCards([]);
+      } else if (!usedCards.includes(e)) {
         setScore(score + 1);
         setUsedCards([...usedCards, e]);
       } else {
@@ -157,6 +164,7 @@ const Container = (props) => {
     e.addEventListener("click", () => {
       win.style.display = "none";
       lose.style.display = "none";
+      all.style.display = "none";
     });
   });
 
@@ -194,6 +202,11 @@ const Container = (props) => {
 
       <div className="loseOverlay">
         <span>You lost!</span>
+        <button id="again">Play again?</button>
+      </div>
+
+      <div className="allOverlay">
+        <span>You got all 15!</span>
         <button id="again">Play again?</button>
       </div>
     </>
