@@ -114,7 +114,8 @@
 /* OVERLAYS */
 
 .winOverlay,
-.loseOverlay {
+.loseOverlay,
+.allOverlay {
   display: none;
   position: fixed;
   top: 0;
@@ -130,7 +131,8 @@
 }
 
 .winOverlay span,
-.loseOverlay span {
+.loseOverlay span,
+.allOverlay span {
   color: #fff;
   background: transparent;
   font-size: 65px;
