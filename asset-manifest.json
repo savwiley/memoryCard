@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/memoryCard/static/css/main.68082e21.chunk.css",
-    "main.js": "/memoryCard/static/js/main.eb61f842.chunk.js",
-    "main.js.map": "/memoryCard/static/js/main.eb61f842.chunk.js.map",
+    "main.css": "/memoryCard/static/css/main.e89a6998.chunk.css",
+    "main.js": "/memoryCard/static/js/main.43fcfb2d.chunk.js",
+    "main.js.map": "/memoryCard/static/js/main.43fcfb2d.chunk.js.map",
     "runtime-main.js": "/memoryCard/static/js/runtime-main.d364004d.js",
     "runtime-main.js.map": "/memoryCard/static/js/runtime-main.d364004d.js.map",
     "static/js/2.88048bcb.chunk.js": "/memoryCard/static/js/2.88048bcb.chunk.js",
     "static/js/2.88048bcb.chunk.js.map": "/memoryCard/static/js/2.88048bcb.chunk.js.map",
     "index.html": "/memoryCard/index.html",
-    "static/css/main.68082e21.chunk.css.map": "/memoryCard/static/css/main.68082e21.chunk.css.map",
+    "static/css/main.e89a6998.chunk.css.map": "/memoryCard/static/css/main.e89a6998.chunk.css.map",
     "static/js/2.88048bcb.chunk.js.LICENSE.txt": "/memoryCard/static/js/2.88048bcb.chunk.js.LICENSE.txt",
     "static/media/ageofultron.985b135f.jpg": "/memoryCard/static/media/ageofultron.985b135f.jpg",
     "static/media/antmanwasp.fad249f5.jpg": "/memoryCard/static/media/antmanwasp.fad249f5.jpg",
@@ -29,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.d364004d.js",
     "static/js/2.88048bcb.chunk.js",
-    "static/css/main.68082e21.chunk.css",
-    "static/js/main.eb61f842.chunk.js"
+    "static/css/main.e89a6998.chunk.css",
+    "static/js/main.43fcfb2d.chunk.js"
   ]
 }
